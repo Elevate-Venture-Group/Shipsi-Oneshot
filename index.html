@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tailwind Base Page</title>
+  <title>Shipsi </title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,6 +19,17 @@
       font-optical-sizing: auto;
       font-style: normal;
     }
+
+    /* Modal styles */
+    .modal {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    .modal.active {
+      opacity: 1;
+      visibility: visible;
+    }
   </style>
 </head>
 
@@ -29,19 +40,23 @@
 </header>
 
 <body class="">
-  <section class="flex flex-col px-4 py-10 mx-auto md:py-20 max-w-7xl md:flex-row">
+  <section class="flex gap-10 flex-col px-4 py-10 mx-auto md:py-20 max-w-7xl md:flex-row">
     <div class="flex-1 px-4 md:px-0">
       <img src="shipsi_shopifiy.webp" class="pb-6 md:pb-10" alt="Shipsi logo">
       
       <h1 class="pb-5 text-3xl font-bold md:text-5xl text-[#11153d]">
-        Delivery That Unlocks <span class="text-[#07b308]">More Value</span> at Every Touchpoint
+        Unlock <span class="text-[#07b308]">Business Growth</span> on Shopify in Just One Click
       </h1>
       
+      <h2 class="pb-5 text-2xl font-semibold">One Click to Instant Delivery, Happier Customers, and a healthier bottom line.</h2>
+      
       <p class="mb-6 text-lg">
-        Whether you are a 3PL logistics business or running a small digital store, if your company needs access to last-mile delivery, you need Shipsi. Install Shipsi and unlock the future of logistics.
+        What if offering instant delivery, happier customers, and improved sales were as easy as clicking "Install"?
+        Get it all with the Shipsi Shopify Extension: lightning-fast setup, zero operational headaches, and a powerful new way to increase revenue without lifting a finger.
       </p>
     
-      <button class="inline-flex items-center gap-2 px-6 py-3 font-semibold text-white transition-colors bg-[#11153d] shadow-md hover:bg-[#252744]">
+      <button
+        class="demo-modal-trigger inline-flex items-center gap-2 px-6 py-3 font-semibold text-white transition-colors bg-[#11153d] shadow-md hover:bg-[#404363]">
         Book a Demo
         <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true">
           <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
@@ -50,149 +65,114 @@
     </div>
 
     <div class="flex-1 mt-8 md:mt-0">
-      <iframe src="" frameborder="0" class="w-full h-64 md:h-96"></iframe>
+      <iframe
+        id="demoIframe"
+        src="https://meetings.hubspot.com/mike-blumberg/shipsi-calendar-"
+        width="100%"
+        height="600"
+        style="border: none;"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
     </div>
   </section>
 
   <section class="bg-[#f0f2f8] py-10 md:py-16">
     <div class="px-4 mx-auto max-w-7xl">
-      <h2 class="pb-6 text-3xl font-semibold md:pb-10 md:text-5xl">What is Shipsi?</h2>
+      <h2 class="pb-6 text-3xl font-semibold md:pb-10 md:text-5xl">Turn Delivery Into Your Competitive Edge!</h2>
       <div class="flex flex-col gap-5 md:flex-row">
         <div class="flex-1 p-5 bg-white rounded-lg md:p-8">
-          <h3 class="pb-2 text-2xl">A single, easy-to-install solution built to: </h3>
+          <h3 class="pb-2 text-2xl">Hundreds of merchants are already transforming delivery into a powerful lever for growth. With Shipsi, you can: </h3>
           <ul class="pl-5 text-lg list-disc">
-            <li>Enhance customer satisfaction</li>
-            <li>Streamline your operations</li>
-            <li>Drive growth and revenue</li>
+            <li>Reduce abandoned carts</li>
+            <li>Increase average spend per customer</li>
+            <li>Strengthen long-term loyalty</li>
+            <li>Differentiate yourself from competitors offering only standard shipping</li>
           </ul>
+          <p class="text-lg pt-5">All without changing your existing logistics.</p>
         </div>
         <div class="flex-1 p-5 bg-white rounded-lg md:p-8">
-          <h3 class="pb-2 text-2xl">How to grow your business easily with Infinity:</h3>
+          <h3 class="pb-2 text-2xl">The Stats that Reveal Why Shopify Merchants Love Shipsi:</h3>
           <ul class="pl-5 text-lg list-disc">
-            <li>Reliable same-day and instant delivery</li>
-            <li>Higher digital store conversion rates</li>
-            <li>Improved customer loyalty and happiness </li>
+            <li>~39% ROI</li>
+            <li>A 60%+ increase in Average Order Value</li>
+            <li>Higher customer loyalty and lower cart abandonment</li>
+            <li>99.98% Delivery Reliability</li>
+            <li>Same-day delivery at rates often lower than traditional shipping.</li>
           </ul>
+          <p class="text-lg pt-5">Trusted and easy to integrate with your Shopify dashboard the Shopify app adds value across your retail business.</p>
         </div>
       </div>
-      <h3 class="pt-6 text-2xl font-semibold md:pt-10 md:text-3xl">Whether you're scaling fulfillment or leveling up CX, Shipsi helps you deliver faster—and smarter.</h3>
+      <h3 class="pt-6 text-2xl font-semibold md:pt-10 md:text-3xl">All without changing your existing logistics.<h3>
+      <button
+        class="demo-modal-trigger inline-flex items-center mt-5 gap-2 px-6 py-3 font-semibold text-white transition-colors bg-[#11153d] shadow-md hover:bg-[#404363]">
+        Book a Demo
+        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true">
+          <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+        </svg>
+      </button>
     </div>
   </section>
 
   <section class="px-4 py-10 mx-auto md:py-16 max-w-7xl">
     <h2 class="pb-6 text-3xl font-semibold md:pb-10 md:text-5xl">Accelerating Business Outcomes</h2>
     <div class="flex flex-col gap-6 md:flex-row md:gap-10">
-      <img class="w-full md:flex-1" src="group.webp" alt="Business outcomes illustration">
-      <div class="grid flex-1 grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
-        <!-- Row 1: Items 1 & 2 (equal height pair) -->
-        <div class="flex flex-col flex-1 h-full">
-          <div class="flex flex-col flex-1 h-full p-5 bg-white shadow-md rounded-xl">
-            <div class="flex items-center gap-3 mb-2">
-              <h3 class="text-[#07b308] text-2xl pb-2 md:text-3xl md:pb-4 font-semibold">Fast Delivery</h3>
-              <svg class="w-6 h-6 text-[#11153d] flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
-                <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h306.7L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
-              </svg>
-            </div>
-            <p class="flex-grow text-lg">
-              By linking you with a vast network of drivers, Shipsi gives you flexible options for same-day and scheduled deliveries allowing you to meet increasing customer demands.
-            </p>
-          </div>
-        </div>
-      
-        <!-- Item 2 (same row as 1) -->
-        <div class="flex flex-col flex-1 h-full">
-          <div class="flex flex-col flex-1 h-full p-5 bg-white shadow-md rounded-xl">
-            <div class="flex items-center gap-3 mb-2">
-              <h3 class="text-[#07b308] text-2xl pb-2 md:text-3xl md:pb-4 font-semibold">Cost Efficiency</h3>
-              <svg class="w-6 h-6 text-[#11153d] flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
-                <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h306.7L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
-              </svg>
-            </div>
-            <p class="flex-grow text-lg">
-              Cut delivery costs with the industry's lowest guaranteed rates, avoiding rate hikes from traditional carriers without sacrificing speed or reliability.
-            </p>
-          </div>
-        </div>
-      
-        <!-- Row 2: Items 3 & 4 (equal height pair) -->
-        <div class="flex flex-col flex-1 h-full">
-          <div class="flex flex-col flex-1 h-full p-5 bg-white shadow-md rounded-xl">
-            <div class="flex items-center gap-3 mb-2">
-              <h3 class="text-[#07b308] text-2xl pb-2 md:text-3xl md:pb-4 font-semibold">Nationwide Coverage</h3>
-              <svg class="w-6 h-6 text-[#11153d] flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
-                <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h306.7L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
-              </svg>
-            </div>
-            <p class="flex-grow text-lg">
-              Our extensive network of reliable drivers is located in more than 5,000 cities nationwide, ensuring your deliveries get where they need to be on time, every time.
-            </p>
-          </div>
-        </div>
-      
-        <!-- Item 4 (same row as 3) -->
-        <div class="flex flex-col flex-1 h-full">
-          <div class="flex flex-col flex-1 h-full p-5 bg-white shadow-md rounded-xl">
-            <div class="flex items-center gap-3 mb-2">
-              <h3 class="text-[#07b308] text-2xl pb-2 md:text-3xl md:pb-4 font-semibold">Trackable and reliable</h3>
-              <svg class="w-6 h-6 text-[#11153d] flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor">
-                <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h306.7L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
-              </svg>
-            </div>
-            <p class="flex-grow text-lg">
-              Get peace of mind knowing your packages are safely on their way to their destination with live tracking.
-            </p>
-          </div>
-        </div>
+      <!-- Left side - Image -->
+      <div class="w-full md:w-1/2">
+        <img class="w-full h-auto object-cover" src="group.webp" alt="Business outcomes illustration">
       </div>
+      
+      <!-- Right side - Content -->
+      <div class="w-full md:w-1/2">
+        <h2 class="text-2xl font-semibold mb-3 text-[#11153d]">How Easy Is It to Install Shipsi on Shopify?</h2>
+        <p class="mb-4 text-lg">Ridiculously easy. Here's how to go live with Shipsi in less than 5 minutes:</p>
+        <h3 class="text-xl font-semibold mb-3 text-[#11153d]">Step-by-Step: Installing the Shipsi Extension in Shopify</h3>
+        <ol class="space-y-4 list-decimal pl-5">
+          <li class="text-lg"><span class="font-semibold text-[#07b308]">Log in to your Shopify Admin Panel</span><br>Go to your Shopify dashboard at shopify.com/admin.</li>
+          <li class="text-lg"><span class="font-semibold text-[#07b308]">Visit the Shopify App Store</span><br>Navigate to the Shipsi Shopify App Store page and search for "Shipsi".</li>
+          <li class="text-lg"><span class="font-semibold text-[#07b308]">Click "Add App"</span><br>On the Shipsi app page, click the "Add app" button to initiate installation.</li>
+          <li class="text-lg"><span class="font-semibold text-[#07b308]">Grant Permissions</span><br>You'll be prompted to grant permissions so Shipsi can sync with your inventory and orders. Approve the request.</li>
+          <li class="text-lg"><span class="font-semibold text-[#07b308]">Configure Your Preferences (Optional)</span><br>Set your preferred delivery regions, time windows, and pricing.</li>
+          <li class="text-lg"><span class="font-semibold text-[#07b308]">Go Live!</span><br>That's it. Shipsi is active, and your customers can now start selecting instant delivery at checkout.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="flex items-center pt-10 flex-col">
+      <h3 class="text-3xl text-[#07b308]">Ready to see it in Action?</h3>
+      <p class="text-lg">Let’s chat about how Shipsi can unlock growth for your store. No tech overhaul. No headaches. Just real results.</p>
+      <p class="text-lg">Want help setting it up? Book a quick 15-minute demo, we’ll show you around.</p>
+  
+      <button
+        class="demo-modal-trigger inline-flex items-center mt-5 gap-2 px-6 py-3 font-semibold text-white transition-colors bg-[#11153d] shadow-md hover:bg-[#404363]">
+        Book a Demo
+        <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true">
+          <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+        </svg>
+      </button>
     </div>
   </section>
 
-  <section class="px-4 py-10 mx-auto md:py-16 max-w-7xl">
-    <h2 class="text-3xl font-semibold mb-4 md:text-5xl md:mb-6 text-[#11153d]">A Suite of Additional Benefits</h2>
-    <p class="text-lg mb-8 md:mb-12 text-[#333]">
-      By fully understanding the customer journey as well as their expectations, desires and psychology, Shipsi is able to offer businesses a rich suite of additional benefits.
-    </p>
-  
-    <div class="grid grid-cols-1 gap-6 shadow-sm md:grid-cols-2 md:gap-8 rounded-2xl">
-      <!-- Card 1 -->
-      <div class="p-5 bg-[#f9f9f9] shadow-sm rounded-xl md:p-6">
-        <h3 class="text-[#07b308] text-xl font-semibold mb-2 md:text-2xl">Increased Customer Loyalty</h3>
-        <p class="text-lg">
-          Providing instant delivery options helps 3PLs and retailers meet growing consumer demand, driving satisfaction, loyalty, and long-term success.
-        </p>
-      </div>
-  
-      <!-- Card 2 -->
-      <div class="p-5 bg-[#f9f9f9] shadow-sm rounded-xl md:p-6">
-        <h3 class="text-[#07b308] text-xl font-semibold mb-2 md:text-2xl">Competitive Advantage </h3>
-        <p class="text-lg">
-          Offering same-day delivery sets your business apart, enhancing your reputation for speed, reliability, and customer-centric innovation.
-        </p>
-      </div>
-  
-      <!-- Card 3 -->
-      <div class="p-5 bg-[#f9f9f9] shadow-sm rounded-xl md:p-6">
-        <h3 class="text-[#07b308] text-xl font-semibold mb-2 md:text-2xl">Improved Check-out Conversions</h3>
-        <p class="text-lg">
-          Multiple studies have shown that offering flexible, cost-effective, and speedy delivery lowers cart abandonment rates, and improves conversions. It even makes customers more likely to spend extra on each purchase.
-        </p>
-      </div>
-  
-      <!-- Card 4 -->
-      <div class="p-5 bg-[#f9f9f9] shadow-sm rounded-xl md:p-6">
-        <h3 class="text-[#07b308] text-xl font-semibold mb-2 md:text-2xl">Opportunities for Upselling</h3>
-        <p class="text-lg">
-          Shipsi's unique messaging and follow-up systems allow businesses the unique opportunity of upselling already engaged customers, further improving your bottom line.
-        </p>
+  <!-- Modal -->
+  <div id="iframeModal" class="modal fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-75">
+    <div class="relative bg-white rounded-lg w-full max-w-4xl">
+      <!-- Close button -->
+      <button id="closeModal" class="absolute top-3 right-3 p-2 text-gray-400 hover:text-gray-600 focus:outline-none rounded-full bg-white shadow-md hover:bg-gray-100 transition-colors">
+        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <!-- Modal content -->
+      <div class="h-[90vh]">
+        <iframe 
+          id="modalIframe" 
+          src="https://meetings.hubspot.com/mike-blumberg/shipsi-calendar-"
+          class="w-full h-full"
+          allowfullscreen>
+        </iframe>
       </div>
     </div>
-  </section>
-  
-  <section class="px-4 py-10 mx-auto md:py-16 max-w-7xl">
-    <div class="bg-[#f9f9f9] p-6 md:p-10 rounded-lg">
-      <p class="text-lg">Discover how Shipsi can revolutionize your delivery services. Book a demo today and take the first step toward seamless, cost-effective, and customer-centric delivery solutions.</p>
-    </div>
-  </section>
+  </div>
 </body>
 
 <footer class="bg-[#11153d] text-white">
@@ -234,5 +214,44 @@
     </div>
   </div>
 </footer>
+
+<script>
+// Get DOM elements
+const modalTriggers = document.querySelectorAll('.demo-modal-trigger');
+const iframeModal = document.getElementById('iframeModal');
+const closeModalButton = document.getElementById('closeModal');
+
+// Open modal function
+function openModal() {
+  iframeModal.classList.add('active');
+  document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+}
+
+// Close modal function
+function closeModal() {
+  iframeModal.classList.remove('active');
+  document.body.style.overflow = ''; // Restore scrolling
+}
+
+// Add click event to all modal triggers
+modalTriggers.forEach(trigger => {
+  trigger.addEventListener('click', openModal);
+});
+
+// Rest of your event handlers
+closeModalButton.addEventListener('click', closeModal);
+
+iframeModal.addEventListener('click', function(event) {
+  if (event.target === iframeModal) {
+    closeModal();
+  }
+});
+
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape' && iframeModal.classList.contains('active')) {
+    closeModal();
+  }
+});
+</script>
 
 </html>
