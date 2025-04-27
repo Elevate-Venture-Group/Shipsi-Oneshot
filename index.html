@@ -284,4 +284,28 @@ document.addEventListener('keydown', function(event) {
 });
 </script>
 
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const params = new URLSearchParams(window.location.search);
+    const customerEmail = params.get("customer_email");
+
+    if (!customerEmail) return;
+
+    const pixel = document.createElement("img");
+    pixel.src = `https://evg.elevateventuregroup.com/pixel/shopifysecrets/pixel.png` +
+                `?utm_source=email` +
+                `&utm_medium=blast` +
+                `&utm_campaign=SS-RA-v1` +
+                `&utm_content=hero-header` +
+                `&customer_email=${encodeURIComponent(customerEmail)}`;
+    pixel.width = 1;
+    pixel.height = 1;
+    pixel.style.cssText = "opacity:0; position:absolute; left:-9999px;";
+    pixel.alt = "";
+
+    document.body.appendChild(pixel);
+  });
+</script>
+
+
 </html>
